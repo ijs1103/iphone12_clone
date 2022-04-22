@@ -9,7 +9,7 @@ const duration = 4;
 const VIDEO_ID = '9GA4gqLeeIQ';
 let player1, player2;
 
-function onYouTubeIframeAPIReady() {
+window.onYouTubeIframeAPIReady = function onYouTubeIframeAPIReady() {
 	player1 = new YT.Player('player_1', {
 		videoId: VIDEO_ID, // 유튜브 영상 ID
 		playerVars: {
@@ -53,5 +53,6 @@ const onPlayerStateChange_2 = (state) => {
 		setTimeout(() => player2.seekTo(start_2), duration * 1000);
 	}
 };
+
 
 
