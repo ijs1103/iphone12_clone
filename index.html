@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- gsap -->
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"
+		integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollTrigger.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+	<script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<!-- google icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- local css -->
+	<link rel="stylesheet" href="./scss/main.css">
+	<link rel="stylesheet" href="./scss/tablet.css" media="(max-width: 1023px)">
+	<link rel="stylesheet" href="./scss/mobile.css" media="(max-width: 768px)">
+	<!-- hero image preload -->
+	<link rel="preload" as="image" href="./images/purple_full.jpeg">
+	<link rel="preload" as="image" href="./images/purple.jpg">
+	<title>Iphone 12</title>
+	<script defer src="./js/youtube.js"></script>
+	<script defer src="./js/main.js"></script>
+</head>
+
+<body>
+	<nav class="global-nav">
+		<div class="nav__links">
+			<ul>
+				<li class="mobile-icon menu"><a href="javascript:void(0)"><span class="material-icons">menu</span></a></li>
+				<li class="mobile-icon home"><a href="javascript:void(0)" class="apple-logo">
+						<span></span>
+					</a></li>
+				<div class="global-nav__links__menu__tray">
+					<li><a href="javascript:void(0)">스토어</a></li>
+					<li><a href="javascript:void(0)">Mac</a></li>
+					<li><a href="javascript:void(0)">Ipad</a></li>
+					<li><a href="javascript:void(0)">Iphone</a></li>
+					<li><a href="javascript:void(0)">Watch</a></li>
+					<li><a href="javascript:void(0)">Airpods</a></li>
+					<li><a href="javascript:void(0)">TV 및 홈</a></li>
+					<li><a href="javascript:void(0)">Apple 독점 제공</a></li>
+					<li><a href="javascript:void(0)">액서세리</a></li>
+					<li><a href="javascript:void(0)">고객지원</a></li>
+					<li class="mobile-icon search"><a href="javascript:void(0)">
+							<span class="material-icons">search</span>
+						</a></li>
+				</div>
+				<li class="mobile-icon cart"><a href="javascript:void(0)">
+						<span class="material-icons">shopping_bag</span>
+					</a></li>
+			</ul>
+		</div>
+		<div class="mobile-search">
+			<div class="mobile-search__input">
+				<div class="mobile-search__input__icon"><span class="material-icons">search</span></div>
+				<span class="mobile-search__input__placeholder">apple.com 검색</span>
+			</div>
+		</div>
+	</nav>
+	<nav class="local-nav">
+		<div class="nav__links">
+			<div class="local-nav__links__title">
+				<a href="javascript:void(0)">iPhone 12</a>
+			</div>
+			<div class="local-nav__links__menu">
+				<div class="local-nav__links__menu__tray">
+					<ul>
+						<li>
+							<a href="javascript:void(0)" class="summary">개요</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="hoverable">iPhone으로 갈아타기</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="hoverable">제품 사양</a>
+						</li>
+					</ul>
+				</div>
+				<div class="local-nav__links__menu__actions">
+					<a href="javascript:void(0)" class="local-nav__toggle"><span class="material-icons">expand_more</span></a>
+					<a href="javascript:void(0)" class="button">구입하기</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="local-nav-curtain"></div>
+	<main>
+		<section id="speed">
+			<div class="speed-inner">
+				<div class="sticky-content">
+					<div class="sticky-content__typo-content section-content">
+						<h1>iPhone&nbsp;12 및 iPhone&nbsp;12&nbsp;mini</h1>
+						<h2>스피드 그 이상의 스피드.</h2>
+						<p class="typo-content__intro">막강한 성능의 칩. 5G 스피드. 첨단 듀얼 카메라 시스템. 그 어떤 스마트폰 글래스보다 견고한 Ceramic Shield 소재로 만들어진
+							전면. 밝고 아름다운 OLED 디스플레이까지. 이 모든 걸 갖춘 iPhone 12, 두 가지 매력적인 사이즈로 만날 수 있습니다.</p>
+						<p class="typo-content__price">₩850,000부터(보상 판매* 미적용 가격)</p>
+						<a href="javascript:void(0)" class="typo-content__button">구입하기</a>
+					</div>
+					<div class="sticky-content__image-content">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<picture>
+										<source srcset="./images/purple.jpg" media="(max-width:768px)">
+										<img src="./images/purple_full.jpeg" alt="iphone_purple">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source loading="lazy" decoding="async" srcset="./images/blue.jpg" media="(max-width:768px)">
+										<img loading="lazy" decoding="async" src="./images/blue_full.jpeg" alt="blue">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source loading="lazy" decoding="async" srcset="./images/green.jpg" media="(max-width:768px)">
+										<img loading="lazy" decoding="async" src="./images/green_full.jpeg" alt="green">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source loading="lazy" decoding="async" srcset="./images/red.jpg" media="(max-width:768px)">
+										<img loading="lazy" decoding="async" src="./images/red_full.jpeg" alt="red">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source loading="lazy" decoding="async" srcset="./images/white.jpg" media="(max-width:768px)">
+										<img loading="lazy" decoding="async" src="./images/white_full.jpeg" alt="white">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source loading="lazy" decoding="async" srcset="./images/black.jpg" media="(max-width:768px)">
+										<img loading="lazy" decoding="async" src="./images/black_full.jpeg" alt="black">
+									</picture>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section id="features">
+			<div class="grid-container">
+				<section class="grid-item two_sizes">
+					<div class="grid-item-inner">
+						<h3 class="feature-headline">두 가지 딱 좋은 크기.</h3>
+						<span class="button--modal material-icons">add_circle_outline</span>
+						<div class="media-wrapper">
+							<img src="./images/two_sizes.jpg" alt="two_sizes" />
+						</div>
+					</div>
+				</section>
+				<section class="grid-item fast_strong_chip video">
+					<div class="grid-item-inner">
+						<h3 class="feature-headline white">빠르고 강력한 칩.</h3>
+						<span class="button--modal material-icons white">add_circle_outline</span>
+						<div class="media-wrapper">
+							<div id="player_1"></div>
+						</div>
+						<div class="media-cover"></div>
+					</div>
+				</section>
+				<section class="grid-item battery">
+					<div class="grid-item-inner">
+						<h3 class="feature-headline white">훌륭한 배터리 사용 시간.</h3>
+						<span class="button--modal material-icons white">add_circle_outline</span>
+						<div class="media-wrapper">
+							<img loading="lazy" decoding="async" src="./images/battery.jpg" alt="battery" />
+						</div>
+					</div>
+				</section>
+				<section class="grid-item design_endframe">
+					<div class="grid-item-inner">
+						<h3 class="feature-headline">매끄러운 평면 테두리 디자인.</h3>
+						<span class="button--modal material-icons">add_circle_outline</span>
+						<div class="media-wrapper">
+							<img loading="lazy" decoding="async" src="./images/design_endframe.jpg" alt="endframe" />
+						</div>
+					</div>
+				</section>
+				<section class="grid-item night_mode">
+					<div class="grid-item-inner">
+						<h3 class="feature-headline white">야간 모드 셀피를 지원하는 첨단 듀얼 카메라 시스템.</h3>
+						<span class="button--modal material-icons white">add_circle_outline</span>
+						<div class="media-wrapper">
+							<img loading="lazy" decoding="async" src="./images/night_mode.jpg" alt="night_mode" />
+						</div>
+					</div>
+				</section>
+				<section class="grid-item fiveg">
+					<div class="grid-item-inner">
+						<span class="button--modal material-icons">add_circle_outline</span>
+						<div class="media-wrapper">
+							<img loading="lazy" decoding="async" src="./images/5g.jpg" alt="5g" />
+						</div>
+					</div>
+				</section>
+				<section class="grid-item ceramic_shield">
+					<div class="grid-item-inner">
+						<h3 class="feature-headline white">
+							전면은 놀랍도록 견고한 Ceramic Shield 소재.
+						</h3>
+						<span class="button--modal material-icons white">add_circle_outline</span>
+						<div class="media-wrapper">
+							<img loading="lazy" decoding="async" src="./images/ceramic_shield.jpg" alt="ceramic_shield" />
+						</div>
+					</div>
+				</section>
+				<section class="grid-item oled_display">
+					<div class="grid-item-inner">
+						<h3 class="feature-headline">
+							밝고 아름다운&nbsp;OLED 디스플레이.
+						</h3>
+						<span class="button--modal material-icons">add_circle_outline</span>
+						<div class="media-wrapper">
+							<img loading="lazy" decoding="async" src="./images/oled_display.jpg" alt="oled_display" />
+						</div>
+					</div>
+				</section>
+				<section class="grid-item magsafe">
+					<div class="grid-item-inner">
+						<h3 class="feature-headline">
+							MagSafe. 딱 맞는 액세서리에 착착착.
+						</h3>
+						<span class="button--modal material-icons">add_circle_outline</span>
+						<div class="media-wrapper">
+							<img loading="lazy" decoding="async" src="./images/magsafe.jpg" alt="magsafe" />
+						</div>
+					</div>
+				</section>
+				<section class="grid-item dolby_vision">
+					<div class="grid-item-inner">
+						<h3 class="feature-headline white">
+							7억 가지 색상을 담아내는 Dolby Vision 촬영 방식.
+						</h3>
+						<span class="button--modal material-icons white">add_circle_outline</span>
+						<div class="media-wrapper">
+							<img loading="lazy" decoding="async" src="./images/dolby_vision.jpg" alt="dolby_vision" />
+						</div>
+					</div>
+				</section>
+				<section class="grid-item wet_ok video">
+					<div class="grid-item-inner">
+						<h3 class="feature-headline white">젖어도 오케이.</h3>
+						<span class="button--modal material-icons white">add_circle_outline</span>
+						<div class="media-wrapper">
+							<div id="player_2"></div>
+						</div>
+						<div class="media-cover"></div>
+					</div>
+				</section>
+			</div>
+		</section>
+		<section id="compare">
+			<div class="compare-inner section-content">
+				<h3 class="compare-headline">그 어떤 폰과도 비교할 수 없는 iPhone.</h3>
+				<div class="section-callouts">
+					<div class="section-callout privacy">
+						<div class="content-wrapper">
+							<img loading="lazy" decoding="async" class="compare-icon" src="./images/icon_privacy.jpg"
+								alt="icon_privacy" />
+							<h4 class="compare-subHeadline">개인 정보 보호.</h4>
+							<p class="compare-paragraph">iPhone은 처음부터 개인 정보 보호를 염두에 두고 설계됩니다. Face ID 데이터는 오직 당신의 iPhone에만 저장될 뿐 절대
+								iCloud나 다른 장소에 백업되지 않습니다. 그리고 iOS는 당신이 다운로드하려는 앱의 개인 정보 처리방침을 보여주죠. 개인 정보 보호를 위한 우리의 노력은 이 밖에도 수없이 많습니다.
+							</p>
+							<p class="compare-paragraph active">
+								<a href="javascript:void(0)"><span>Apple과 개인 정보 보호에 대해 더 알아보기</span><span
+										class="material-icons">chevron_right</span></a>
+							</p>
+						</div>
+					</div>
+					<div class="section-callout simple">
+						<div class="content-wrapper">
+							<img loading="lazy" decoding="async" class="compare-icon" src="./images/icon_done.jpg" alt="icon_done" />
+							<h4 class="compare-subHeadline">모든 것이 간편함 그 자체.</h4>
+							<p class="compare-paragraph">Apple의 하드웨어와 소프트웨어는 서로 매끄럽게 연동됩니다. 새로 산 AirPods을 당신의 iPhone에 페어링하고 싶을 땐? 탭 한
+								번이면 설정이 끝납니다. 사진, 동영상, 연락처 등을 가까이에 있는 친구와 공유하고 싶을 때도 AirDrop이 친구의 이름을 화면에 띄워주니 탭 한 번으로 간편하게 공유할 수 있죠.
+							</p>
+						</div>
+					</div>
+					<div class="section-callout power">
+						<div class="content-wrapper">
+							<img loading="lazy" decoding="async" class="compare-icon" src="./images/icon_two_phones.jpg"
+								alt="icon_done" />
+							<h4 class="compare-subHeadline">시대를 견디는 힘.</h4>
+							<p class="compare-paragraph">iPhone은 매우 견고한 소재와 생활 방수 기능으로 놀랍도록 강력한 내구성을 자랑합니다. 또한, 자동 iOS 업데이트가 선사하는 새로운
+								기능과 보안 강화 덕분에 iPhone은 다른 어떤 스마트폰보다 더 아름답게 작동하며, 더 오랜 시간 그 가치를 유지하죠.</p>
+						</div>
+					</div>
+					<div class="section-callout environment">
+						<div class="content-wrapper">
+							<img loading="lazy" decoding="async" class="compare-icon" src="./images/icon_apple.jpg"
+								alt="icon_apple" />
+							<h4 class="compare-subHeadline">환경에 대한 고려.</h4>
+							<p class="compare-paragraph">우리는 탄소 발자국을 줄이기 위해 끊임없이 혁신하고 있습니다. 현재 우리의 매장, 사무실, 데이터 센터, 사업 운영 활동은 이미 탄소
+								중립을 실현했습니다. 그리고 2030년까지 우리의 제품들, 그리고 이 제품들을 사용하는 데 따르는 탄소 발자국 역시 탄소 중립을 달성하는 것이 목표입니다.</p>
+							<p class="compare-paragraph active">
+								<a href="javascript:void(0)"><span>Apple과 환경에 대해 더 알아보기</span><span
+										class="material-icons">chevron_right</span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="which">
+			<div class="which-inner section-content">
+				<h3 class="which-headline">어떤 iPhone이 당신에게 맞을까요?</h3>
+				<div class="which-content">
+					<div class="which-grid-container">
+						<div class="iphone_13_pro device">
+							<div class="device-image">
+								<img loading="lazy" decoding="async" src="./images/iphone13_pro.jpg" alt="iphone13" />
+							</div>
+							<div class="device-color iphone13_pro_colors">
+								<img loading="lazy" decoding="async" src="./images/iphone13_pro_colors.jpg" alt="iphone13_pro_colors" />
+							</div>
+							<div class="device-content">
+								<h4>
+									<span>New</span>
+									<img loading="lazy" decoding="async" class="logo logo_iphone_13_pro"
+										src="./images/logo_iphone_13_pro.png" alt="logo_iphone_13_pro" />
+								</h4>
+								<p class="slogan">궁극의 iPhone.</p>
+								<p class="price">₩1,350,000부터</p>
+								<a href="javascript:void(0)" class="button">구입하기</a>
+								<a href="javascript:void(0)" class="cta">더 알아보기<span class="material-icons">chevron_right</span></a>
+							</div>
+						</div>
+						<div class="iphone_13_pro display">
+							<h5>16.9cm 또는 15.4cm</h5>
+							<p>ProMotion 기술이 적용된<br>전면 화면 OLED 디스플레이</p>
+						</div>
+						<div class="iphone_13_pro camera">
+							<img loading="lazy" decoding="async" src="./images/icon_iphone13_pro_camera.png"
+								alt="icon_iphone13_pro_camera" />
+							<p>프로급 카메라 시스템</p>
+							<p>망원, 와이드, 울트라 와이드</p>
+						</div>
+						<div class="iphone_13_pro chip">
+							<img loading="lazy" decoding="async" src="./images/icon_a15.png" alt="icon_a15" />
+							<p>A15 Bionic 칩</p>
+							<p>5코어 GPU</p>
+						</div>
+						<div class="iphone_13_pro cellular">
+							<img loading="lazy" decoding="async" src="./images/icon_5g.png" alt="icon_5g" />
+							<p>초고속 5G 셀룰러</p>
+						</div>
+						<div class="iphone_13_pro battery">
+							<img loading="lazy" decoding="async" src="./images/icon_battery.png" alt="icon_battery" />
+							<p>최대 28시간 동영상 재생</p>
+						</div>
+						<div class="iphone_13_pro authentication">
+							<img loading="lazy" decoding="async" src="./images/icon_face_id.png" alt="icon_face_id" />
+							<p>Face ID</p>
+						</div>
+						<div class="iphone_13 device">
+							<div class="device-image">
+								<img loading="lazy" decoding="async" src="./images/iphone13.jpg" alt="iphone13" />
+							</div>
+							<div class="device-color iphone13_colors">
+								<img loading="lazy" decoding="async" src="./images/iphone13_colors.png" alt="iphone13_colors" />
+							</div>
+							<div class="device-content">
+								<h4>
+									<span>New</span>
+									<img loading="lazy" decoding="async" class="logo logo_iphone_13" src="./images/logo_iphone_13.png"
+										alt="logo_iphone_13" />
+								</h4>
+								<p class="slogan">막강한 성능.</p>
+								<p class="price">₩950,000부터</p>
+								<a href="javascript:void(0)" class="button">구입하기</a>
+								<a href="javascript:void(0)" class="cta">더 알아보기<span class="material-icons">chevron_right</span></a>
+							</div>
+						</div>
+						<div class="iphone_13 display">
+							<h5>15.4cm 또는 13.7cm</h5>
+							<p>전면 화면 OLED 디스플레이</p>
+						</div>
+						<div class="iphone_13 camera">
+							<img loading="lazy" decoding="async" src="./images/icon_iphone13_camera.png" alt="icon_iphone13_camera" />
+							<p>첨단 듀얼 카메라 시스템</p>
+							<p>와이드, 울트라 와이드</p>
+						</div>
+						<div class="iphone_13 chip">
+							<img loading="lazy" decoding="async" src="./images/icon_a15.png" alt="icon_a15" />
+							<p>A15 Bionic 칩</p>
+							<p>4코어 GPU</p>
+						</div>
+						<div class="iphone_13 cellular">
+							<img loading="lazy" decoding="async" src="./images/icon_5g.png" alt="icon_5g" />
+							<p>초고속 5G 셀룰러</p>
+						</div>
+						<div class="iphone_13 battery">
+							<img loading="lazy" decoding="async" src="./images/icon_battery.png" alt="icon_battery" />
+							<p>최대 19시간 동영상 재생</p>
+						</div>
+						<div class="iphone_13 authentication">
+							<img loading="lazy" decoding="async" src="./images/icon_face_id.png" alt="icon_face_id" />
+							<p>Face ID</p>
+						</div>
+						<div class="iphone_se device">
+							<div class="device-image">
+								<img loading="lazy" decoding="async" src="./images/iphone_se.jpg" alt="iphone_se" />
+							</div>
+							<div class="device-color iphonese_colors">
+								<img loading="lazy" decoding="async" src="./images/iphone_se_colors.png" alt="iphone_se_colors" />
+							</div>
+							<div class="device-content">
+								<h4>
+									<span>New</span>
+									<img loading="lazy" decoding="async" class="logo logo_iphone_se" src="./images/logo_iphone_se.png"
+										alt="logo_iphone_se" />
+								</h4>
+								<p class="slogan">파워도 제대로. 실속도 제대로.</p>
+								<p class="price">₩590,000부터</p>
+								<a href="javascript:void(0)" class="button">구입하기</a>
+								<a href="javascript:void(0)" class="cta">더 알아보기<span class="material-icons">chevron_right</span></a>
+							</div>
+						</div>
+						<div class="iphone_se display">
+							<h5>11.9cm</h5>
+							<p>LCD 디스플레이</p>
+						</div>
+						<div class="iphone_se camera">
+							<img loading="lazy" decoding="async" src="./images/icon_iphone_se_camera.png"
+								alt="icon_iphone_se_camera" />
+							<p>싱글 카메라 시스템</p>
+							<p>와이드</p>
+						</div>
+						<div class="iphone_se chip">
+							<img loading="lazy" decoding="async" src="./images/icon_a15.png" alt="icon_a15" />
+							<p>A15 Bionic 칩</p>
+							<p>4코어 GPU</p>
+						</div>
+						<div class="iphone_se cellular">
+							<img loading="lazy" decoding="async" src="./images/icon_5g.png" alt="icon_5g" />
+							<p>5G 셀룰러</p>
+						</div>
+						<div class="iphone_se battery">
+							<img loading="lazy" decoding="async" src="./images/icon_battery.png" alt="icon_battery" />
+							<p>최대 15시간 동영상 재생</p>
+						</div>
+						<div class="iphone_se authentication">
+							<img loading="lazy" decoding="async" src="./images/icon_touch_id.png" alt="icon_touch_id" />
+							<p>Touch ID</p>
+						</div>
+						<div class="iphone_12 device">
+							<div class="device-image">
+								<img loading="lazy" decoding="async" src="./images/iphone_12.jpg" alt="iphone_12" />
+							</div>
+							<div class="device-color iphone12_colors">
+								<img loading="lazy" decoding="async" src="./images/iphone_12_colors.png" alt="iphone_12_colors" />
+							</div>
+							<div class="device-content">
+								<h4>
+									<img loading="lazy" decoding="async" class="logo logo_iphone_12" src="./images/logo_iphone_12.png"
+										alt="logo_iphone_12" />
+								</h4>
+								<p class="slogan">여전한 놀라움.</p>
+								<p class="price">₩850,000부터</p>
+								<a href="javascript:void(0)" class="button">구입하기</a>
+								<a href="javascript:void(0)" class="cta">더 알아보기<span class="material-icons">chevron_right</span></a>
+							</div>
+						</div>
+						<div class="iphone_12 display">
+							<h5>15.4cm 또는 13.7cm</h5>
+							<p>전면 화면 OLED 디스플레이</p>
+						</div>
+						<div class="iphone_12 camera">
+							<img loading="lazy" decoding="async" src="./images/icon_iphone12_camera.png" alt="icon_iphone12_camera" />
+							<p>듀얼 카메라 시스템</p>
+							<p>와이드, 울트라 와이드</p>
+						</div>
+						<div class="iphone_12 chip">
+							<img loading="lazy" decoding="async" src="./images/icon_a14.png" alt="icon_a14" />
+							<p>A14 Bionic 칩</p>
+						</div>
+						<div class="iphone_12 cellular">
+							<img loading="lazy" decoding="async" src="./images/icon_5g.png" alt="icon_5g" />
+							<p>초고속 5G 셀룰러</p>
+						</div>
+						<div class="iphone_12 battery">
+							<img loading="lazy" decoding="async" src="./images/icon_battery.png" alt="icon_battery" />
+							<p>최대 17시간 동영상 재생</p>
+						</div>
+						<div class="iphone_12 authentication">
+							<img loading="lazy" decoding="async" src="./images/icon_face_id.png" alt="icon_face_id" />
+							<p>Face ID</p>
+						</div>
+					</div>
+					<div class="which-cta">
+						<a href="javascript:void(0)" class="cta">모든 iPhone 모델 비교하기<span
+								class="material-icons">chevron_right</span></a>
+						<a href="javascript:void(0)" class="cta">iPhone 쇼핑하기<span class="material-icons">chevron_right</span></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="reason">
+			<div class="reason-inner section-content">
+				<div class="reason-header">
+					<h3 class="reason-headline">iPhone, Apple에서 사면<br>가장 좋은 이유.</h3>
+					<a href="javascript:void(0)" class="cta">더 알아보기<span class="material-icons">chevron_right</span></a>
+				</div>
+			</div>
+		</section>
+		<section id="buy">
+			<div class="buy-inner section-content">
+				<div class="credit">
+					<h3>스마트폰을 보상 판매하고 크레딧으로 돌려받으세요.</h3>
+					<p>Apple Trade In을 통해 보상 판매 대상 스마트폰을 반납하고, 새 iPhone 구매 시 사용할 수 있는 크레딧으로 교환할 수 있습니다. 기기의 가치를 최대한 활용하는 것, 당신은 물론
+						지구에게도 좋은 일이죠.</p>
+					<p>
+						<a href="javascript:void(0)" class="cta">더 알아보기<span class="material-icons">chevron_right</span></a>
+					</p>
+				</div>
+				<div class="best-buy">
+					<h3>iPhone을 구입하기<br>가장 좋은 곳.</h3>
+					<p>최신 iPhone 구입과 관련해 궁금한 점이 있으신가요? 저희가 도와드리겠습니다.</p>
+					<p>
+						<a href="javascript:void(0)" class="cta">더 알아보기<span class="material-icons">chevron_right</span></a>
+					</p>
+				</div>
+			</div>
+		</section>
+		<section id="delivery">
+			<div class="delivery-inner section-content">
+				<div class="free">
+					<div class="inner">
+						<img loading="lazy" decoding="async" src="./images/icon_box.svg" alt="icon_box" />
+						<h3>업무일 기준 무료 익일 배송</h3>
+						<p>오후 3시 이전에 주문된<br>재고 보유 제품에 한합니다.</p>
+						<div>
+							<a href="javascript:void(0)" class="cta">더 알아보기<span class="material-icons">chevron_right</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="finance">
+					<div class="inner">
+						<img loading="lazy" decoding="async" src="./images/icon_finance.svg" alt="icon_finance" />
+						<h3>금융혜택</h3>
+						<p>무이자 할부를 통해 Apple 제품을<br>부담 없이 구매하실 수 있습니다.</p>
+						<div>
+							<a href="javascript:void(0)" class="cta">더 알아보기<span class="material-icons">chevron_right</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="help">
+					<div class="inner">
+						<img loading="lazy" decoding="async" src="./images/icon_chat.svg" alt="icon_chat" />
+						<h3>도움이 필요하다면</h3>
+						<p>질문이 있으신가요? 전문가와 전화로<br>상담하거나 온라인으로 채팅하세요.<br>080-330-8877로 전화 주세요.</p>
+						<div>
+							<a href="javascript:void(0)" class="cta">문의하기<span class="material-icons">chevron_right</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+	<footer>
+		<div class="footer-inner section-content">
+
+			<nav class="nav-breadcrumbs">
+				<a class="apple-logo" href="javascript:void(0)">
+					<span></span>
+				</a>
+				<ol>
+					<li>
+						<span>iPhone</span>
+					</li>
+					<li>
+						<span>iPhone 12</span>
+					</li>
+					<li>
+						<span>주요 특징</span>
+					</li>
+				</ol>
+			</nav>
+			<nav class="nav-links">
+				<div class="link-items">
+					<div class="link-item">
+						<div class="link-item-title">쇼핑 및 알아보기</div>
+						<div class="link-item-content">
+							<a href="javascript:void(0)">스토어</a>
+							<a href="javascript:void(0)">Mac</a>
+							<a href="javascript:void(0)">iPad</a>
+							<a href="javascript:void(0)">iPhone</a>
+							<a href="javascript:void(0)">Watch</a>
+							<a href="javascript:void(0)">AirPods</a>
+							<a href="javascript:void(0)">TV 및 홈</a>
+							<a href="javascript:void(0)">iPod Touch</a>
+							<a href="javascript:void(0)">AirTag</a>
+							<a href="javascript:void(0)">액세서리</a>
+						</div>
+					</div>
+					<div class="link-item">
+						<div class="link-item-section">
+							<div class="link-item-title">서비스</div>
+							<div class="link-item-content">
+								<a href="javascript:void(0)">스토어</a>
+								<a href="javascript:void(0)">Mac</a>
+								<a href="javascript:void(0)">iPad</a>
+								<a href="javascript:void(0)">iPhone</a>
+								<a href="javascript:void(0)">Watch</a>
+								<a href="javascript:void(0)">AirPods</a>
+								<a href="javascript:void(0)">TV 및 홈</a>
+								<a href="javascript:void(0)">iPod Touch</a>
+								<a href="javascript:void(0)">AirTag</a>
+								<a href="javascript:void(0)">액세서리</a>
+							</div>
+						</div>
+						<div class="link-item-section">
+							<div class="link-item-title">계정</div>
+							<div class="link-item-content">
+								<a href="javascript:void(0)">APPLE ID 관리</a>
+								<a href="javascript:void(0)">APPLE Store 계정</a>
+								<a href="javascript:void(0)">iCloud.com</a>
+							</div>
+						</div>
+					</div>
+					<div class="link-item">
+						<div class="link-item-title">Apple Store</div>
+						<div class="link-item-content">
+							<a href="javascript:void(0)">Chrome 브라우저</a>
+							<a href="javascript:void(0)">기기</a>
+							<a href="javascript:void(0)">웹 스토어</a>
+						</div>
+					</div>
+					<div class="link-item">
+						<div class="link-item-section">
+							<div class="link-item-title">비즈니스</div>
+							<div class="link-item-content">
+								<a href="javascript:void(0)">스토어</a>
+								<a href="javascript:void(0)">Mac</a>
+								<a href="javascript:void(0)">iPad</a>
+								<a href="javascript:void(0)">iPhone</a>
+								<a href="javascript:void(0)">Watch</a>
+								<a href="javascript:void(0)">AirPods</a>
+								<a href="javascript:void(0)">TV 및 홈</a>
+								<a href="javascript:void(0)">iPod Touch</a>
+								<a href="javascript:void(0)">AirTag</a>
+								<a href="javascript:void(0)">액세서리</a>
+							</div>
+						</div>
+						<div class="link-item-section">
+							<div class="link-item-title">교육</div>
+							<div class="link-item-content">
+								<a href="javascript:void(0)">APPLE ID 관리</a>
+								<a href="javascript:void(0)">APPLE Store 계정</a>
+								<a href="javascript:void(0)">iCloud.com</a>
+							</div>
+						</div>
+					</div>
+					<div class="link-item">
+						<div class="link-item-section">
+							<div class="link-item-title">Apple의 가치관</div>
+							<div class="link-item-content">
+								<a href="javascript:void(0)">스토어</a>
+								<a href="javascript:void(0)">Mac</a>
+								<a href="javascript:void(0)">iPad</a>
+								<a href="javascript:void(0)">iPhone</a>
+								<a href="javascript:void(0)">Watch</a>
+								<a href="javascript:void(0)">AirPods</a>
+								<a href="javascript:void(0)">TV 및 홈</a>
+								<a href="javascript:void(0)">iPod Touch</a>
+								<a href="javascript:void(0)">AirTag</a>
+								<a href="javascript:void(0)">액세서리</a>
+							</div>
+						</div>
+						<div class="link-item-section">
+							<div class="link-item-title">Apple의 정보</div>
+							<div class="link-item-content">
+								<a href="javascript:void(0)">APPLE ID 관리</a>
+								<a href="javascript:void(0)">APPLE Store 계정</a>
+								<a href="javascript:void(0)">iCloud.com</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<section></section>
+		</div>
+	</footer>
+</body>
+
+</html>

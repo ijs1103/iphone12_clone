@@ -1,0 +1,52 @@
+@mixin common-border-bottom {
+	border-bottom: 1px solid #ddd;
+}
+
+@mixin button {
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+	background-color: #CEAB93;
+	color: #fff;
+	border-radius: 980px;
+
+	&:hover {
+		background-color: #AD8B73;
+	}
+}
+
+@mixin cta {
+	color: #06c;
+	position: relative;
+
+	.material-icons {
+		font-size: inherit;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: -1.4em;
+	}
+}
+
+@mixin apple-logo {
+	span {
+		background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+/* 이미지 강제로 늘려서 부모요소에 채우는 mixin */
+@mixin image-full-fit {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+}

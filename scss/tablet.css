@@ -1,0 +1,212 @@
+@charset "UTF-8";
+html {
+  font-family: 'Apple SD Gothic Neo', Roboto, 'Noto Sans KR', NanumGothic, 'Malgun Gothic', sans-serif;
+  line-height: 1.2;
+  word-wrap: break-word;
+  font-size: 10px;
+}
+
+:lang(ko) {
+  word-break: keep-all;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+div, span, article, section, header, footer, aside, p, ul, li, fieldset, legend, label, a, nav, form {
+  box-sizing: border-box;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* IPHONE_12 CUSTOM */
+body {
+  background-color: #fff;
+}
+
+h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
+  margin-top: .8em;
+}
+
+ol + *, p + *, ul + * {
+  margin-top: .8em;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+/* 공통  */
+/* grid 관련 변수 */
+:root {
+  --grid-tile-border-radius: 25px;
+  --grid-gutter: 20px;
+  --grid-auto-rows: 550px;
+}
+
+/* nav inner */
+.nav__links {
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* google icon */
+.material-icons {
+  display: block;
+  font-size: 19px;
+}
+
+/* 이미지 강제로 늘려서 부모요소에 채우는 mixin */
+:root {
+  --grid-tile-border-radius: 17px;
+  --grid-gutter: 10px;
+  --grid-auto-rows: 385px;
+}
+
+/* section #speed */
+.section-content {
+  margin: 0 auto;
+  width: 692px;
+}
+
+/* FEATURES */
+.grid-container {
+  padding: 52px var(--grid-gutter) 89px;
+  max-width: 744px;
+}
+
+.grid-container .two_sizes .grid-item-inner {
+  margin-right: unset;
+  flex-direction: row;
+}
+
+.feature-headline {
+  font-size: 32px;
+}
+
+.button--modal {
+  bottom: 10px;
+  right: 10px;
+}
+
+.grid-container .two_sizes .grid-item-inner .media-wrapper {
+  width: 488px;
+  height: 328px;
+  left: auto;
+}
+
+.grid-container .design_endframe .grid-item-inner .media-wrapper {
+  width: 608px;
+  height: 360px;
+}
+
+.grid-container .oled_display .grid-item-inner .media-wrapper {
+  height: auto;
+}
+
+/* COMPARE */
+section#compare {
+  padding-top: 82px;
+  padding-bottom: 12px;
+}
+
+.compare-headline {
+  margin-bottom: 52px;
+}
+
+.section-callout {
+  flex-basis: 41.66667%;
+  max-width: 41.66667%;
+}
+
+.section-callout:nth-child(2n) {
+  margin-left: 16.66667%;
+}
+
+.compare-subHeadline {
+  margin-top: 30px;
+  margin-bottom: 22px;
+}
+
+/* WHICH */
+section#which {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+.which-content {
+  margin-top: 52px;
+}
+
+.which-grid-container {
+  max-width: 500px;
+  column-gap: 78px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(16, auto);
+  grid-template-areas: "iphone_13_pro-device iphone_13-device" "iphone_13_pro-display iphone_13-display" "iphone_13_pro-camera iphone_13-camera" "iphone_13_pro-chip iphone_13-chip" "iphone_13_pro-cellular iphone_13-cellular" "iphone_13_pro-battery iphone_13-battery" "iphone_13_pro-authentication iphone_13-authentication" "iphone_se-device iphone_12-device" "iphone_se-display iphone_12-display" "iphone_se-camera iphone_12-camera" "iphone_se-chip iphone_12-chip" "iphone_se-cellular iphone_12-cellular" "iphone_se-battery iphone_12-battery" "iphone_se-authentication iphone_12-authentication";
+}
+
+.which-cta {
+  margin-top: 18px;
+  font-size: 19px;
+}
+
+/* REASON */
+section#reason {
+  padding-top: 92px;
+}
+
+/* BUY */
+.buy-inner {
+  padding-top: 112px;
+  padding-bottom: 90px;
+}
+
+/* DELIVERY */
+.help {
+  flex-basis: 100%;
+}
