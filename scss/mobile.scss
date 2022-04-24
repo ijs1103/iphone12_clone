@@ -152,6 +152,9 @@ nav.local-nav {
 /* main */
 
 /* SPEED */
+.sticky-content {
+	position: static;
+}	
 .section-content {
 	margin: 0 auto;
 	width: 87.5% !important;
@@ -284,4 +287,8 @@ section#buy .buy-inner {
 			margin-top: 0;
 		}
 	}
+}
+/* BLANK */
+section#blank {
+	height: 20vh;
 }

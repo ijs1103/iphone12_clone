@@ -1,5 +1,3 @@
-import './youtube.js';
-
 /* global-nav 토글 버튼 관련 */
 const globalNavEl = document.querySelector('.global-nav');
 const mobileMenuEl = document.querySelector('.mobile-icon.menu');

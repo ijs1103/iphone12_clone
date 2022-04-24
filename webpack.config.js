@@ -8,7 +8,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
 	entry: {
 		main: './js/main.js', // 파일을 읽어드리는 진입점을 설정 
-		youtube: './js/youtube.js'
+		youtube: './js/youtube.js',
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'), // resolve() : 매개변수 2가지의 경로를 합친다, __dirname : 현재 파일의 경로 , 기본값 => dist 경로

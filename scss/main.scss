@@ -179,7 +179,7 @@ section#speed {
 		min-height: 200vh;
 		margin-bottom: -100vh;
 		margin-top: 0;
-		.sticky-content {
+		@at-root .sticky-content {
 			top: 0;
 			min-height: 100vh;
 			position: sticky;
@@ -997,7 +997,11 @@ footer {
 			margin-top: 18px;
 		}
 	}
-	
+}
+/* Blank */
+section#blank {
+	background-color: map-get($color, bgc-gray);
+	height: 0;
 }
 
 

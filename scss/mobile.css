@@ -271,6 +271,10 @@ nav.local-nav .nav__links .local-nav__links__menu .local-nav__links__menu__actio
 
 /* main */
 /* SPEED */
+.sticky-content {
+  position: static;
+}
+
 .section-content {
   margin: 0 auto;
   width: 87.5% !important;
@@ -431,4 +435,9 @@ section#buy .buy-inner {
 
 .link-items .link-item .link-item-section + .link-item-section {
   margin-top: 0;
+}
+
+/* BLANK */
+section#blank {
+  height: 20vh;
 }
