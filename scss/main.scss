@@ -148,16 +148,16 @@ nav.local-nav {
 	position: fixed;
 	top: 0;
 	left: 0;
-	bottom: 0;
-	right: 0;
 	opacity: 0;
 	width: 0;
 	height: 0;
 	background: rgba(0, 0, 0, .65);
-	transition: opacity 1s ease 0.1s;
 	z-index: 8;
+	transition: opacity 1s ease .1s;
 	&.active {
 		opacity: 1;
+		bottom: 0;
+		right: 0;
 		width: 100%;
 		height: 100%;
 	}
@@ -386,9 +386,27 @@ section#features {
 					width: 100%;
 					padding-top: 56.25%;
 				}
-				#player_1 {
+				/* iframe */
+				@at-root .player-wrapper {
 					width: 100%;
 					height: 100%;
+					.player {
+						width: 100%;
+						height: 100%;
+					}
+					&.inactive {
+						display: none;
+					}
+				}
+				/* iframe 정지시 대체 이미지 */
+				@at-root .hidden-image {
+					display: none;
+					&.active {
+						display: block;
+						object-fit: cover;
+						width: 100%;
+						height: 100%;
+					}
 				}
 			}
 			
@@ -518,10 +536,6 @@ section#features {
 				top: 0;
 				left: 0;
 				right: 0;
-				#player_2 {
-					width: 100%;
-					height: 100%;
-				}
 			}
 		}
 	}

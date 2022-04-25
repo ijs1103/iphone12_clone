@@ -23,8 +23,8 @@
 	<link rel="preload" as="image" href="./images/purple_full.jpeg">
 	<link rel="preload" as="image" href="./images/purple.jpg">
 	<title>Iphone 12</title>
-	<script defer src="./js/youtube.js"></script>
-	<script defer src="./js/main.js"></script>
+	<script type="module" src="./js/youtube.js"></script>
+	<script type="module" src="./js/main.js"></script>
 </head>
 
 <body>
@@ -164,7 +164,10 @@
 						<h3 class="feature-headline white">빠르고 강력한 칩.</h3>
 						<span class="button--modal material-icons white">add_circle_outline</span>
 						<div class="media-wrapper">
-							<div id="player_1"></div>
+							<div class="player-wrapper">
+								<div class="player" id="player_1"></div>
+							</div>
+							<img class="hidden-image" loading="lazy" decoding="async" src="./images/fastchip.jpeg" alt="fast_strong_chip" />
 						</div>
 						<div class="media-cover"></div>
 					</div>
@@ -253,7 +256,10 @@
 						<h3 class="feature-headline white">젖어도 오케이.</h3>
 						<span class="button--modal material-icons white">add_circle_outline</span>
 						<div class="media-wrapper">
-							<div id="player_2"></div>
+							<div class="player-wrapper">
+								<div class="player" id="player_2"></div>
+							</div>
+							<img class="hidden-image" loading="lazy" decoding="async" src="./images/wetok.jpeg" alt="wet_ok" />
 						</div>
 						<div class="media-cover"></div>
 					</div>

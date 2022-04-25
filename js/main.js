@@ -21,7 +21,7 @@ const toggleSpanEl = localNavToggleEl.querySelector('span');
 const localNavMenuTrayEl = document.querySelector('.local-nav__links__menu__tray');
 const curtainEl = document.querySelector('.local-nav-curtain');
 let isLocalNavActive = false;
-localNavToggleEl.addEventListener('click', () => {
+const toggleLocalNav = () => {
 	if (!isLocalNavActive) {
 		toggleSpanEl.textContent = 'expand_less';
 		isLocalNavActive = true;
@@ -29,11 +29,12 @@ localNavToggleEl.addEventListener('click', () => {
 		toggleSpanEl.textContent = 'expand_more';
 		isLocalNavActive = false;
 	}
+	curtainEl.classList.toggle('active');
 	localNavEl.classList.toggle('active');
 	localNavMenuTrayEl.classList.toggle('active');
-	curtainEl.classList.toggle('active');
-});
-
+};
+localNavToggleEl.addEventListener('click', () => toggleLocalNav());
+curtainEl.addEventListener('click', () => toggleLocalNav());
 /* global-nav 숨기고 local-nav 투명 효과 관련  */
 function checkMenu() {
 	if (window.scrollY > 48) {

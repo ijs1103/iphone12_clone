@@ -3,6 +3,8 @@ let tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 let firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+const playerEls = document.querySelectorAll('.player-wrapper');
+const hiddenImageEls = document.querySelectorAll('.hidden-image');
 const start1 = 45;
 const start2 = 70;
 const duration = 4;
@@ -44,21 +46,19 @@ const onPlayerReady_1 = async (event) => {
 const onPlayerReady_2 = (event) => {
 	player2.seekTo(start2);
 };
-const stopVideo = (player) => player.stopVideo();
 const onPlayerStateChange_1 = (state) => {
 	if (state.data == YT.PlayerState.PLAYING) {
-		//setTimeout(()=>stopVideo(player1), duration * 1000);
 		play_count ++;
 		if (play_count < LIMIT) {
 			setTimeout(() => player1.seekTo(start1), duration * 1000);
 		} else {
 			stopVideo(player1);
+			iframeHide();
 		}
 	}
 };
 const onPlayerStateChange_2 = (state) => {
 	if (state.data == YT.PlayerState.PLAYING) {
-		//setTimeout(()=>stopVideo(player2), duration * 1000);
 		if (play_count < LIMIT) {
 			setTimeout(() => player2.seekTo(start2), duration * 1000);			
 		} else {
@@ -66,7 +66,13 @@ const onPlayerStateChange_2 = (state) => {
 		}
 	}
 };
-
+const stopVideo = (player) => player.stopVideo();
+const iframeHide = () => {
+	playerEls[0].classList.add('inactive');
+	playerEls[1].classList.add('inactive');
+	hiddenImageEls[0].classList.add('active');
+	hiddenImageEls[1].classList.add('active');
+}
 
 
 
