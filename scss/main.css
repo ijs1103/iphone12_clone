@@ -532,7 +532,6 @@ section#features {
 }
 
 .grid-container .fast_strong_chip {
-  background-color: orange;
   grid-column: span 4;
 }
 
@@ -764,7 +763,6 @@ section#features {
 }
 
 .grid-container .wet_ok {
-  background-color: orange;
   grid-column: span 6;
 }
 
@@ -1001,7 +999,8 @@ section#which .which-inner .which-headline {
   width: 86px;
 }
 
-.which-grid-container .device .device-color.iphone13_colors img, .which-grid-container .device .device-color.iphone12_colors img {
+.which-grid-container .device .device-color.iphone13_colors img,
+.which-grid-container .device .device-color.iphone12_colors img {
   width: 104px;
 }
 
@@ -1093,7 +1092,11 @@ section#which .which-inner .which-headline {
   font-size: 14px;
 }
 
-.which-grid-container .display, .which-grid-container .camera, .which-grid-container .chip, .which-grid-container .cellular, .which-grid-container .battery {
+.which-grid-container .display,
+.which-grid-container .camera,
+.which-grid-container .chip,
+.which-grid-container .cellular,
+.which-grid-container .battery {
   padding-top: 4px;
 }
 
@@ -1219,29 +1222,34 @@ section#buy {
   gap: 24px;
 }
 
-.buy-inner .credit, .buy-inner .best-buy {
+.buy-inner .credit,
+.buy-inner .best-buy {
   width: calc((100% - 24px) / 2);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.buy-inner .credit h3, .buy-inner .best-buy h3 {
+.buy-inner .credit h3,
+.buy-inner .best-buy h3 {
   font-size: 4.2rem;
 }
 
-.buy-inner .credit p, .buy-inner .best-buy p {
+.buy-inner .credit p,
+.buy-inner .best-buy p {
   font-size: 1.9rem;
 }
 
-.buy-inner .credit .cta, .buy-inner .best-buy .cta {
+.buy-inner .credit .cta,
+.buy-inner .best-buy .cta {
   margin: 0 auto;
   font-size: 1.9rem;
   color: #06c;
   position: relative;
 }
 
-.buy-inner .credit .cta .material-icons, .buy-inner .best-buy .cta .material-icons {
+.buy-inner .credit .cta .material-icons,
+.buy-inner .best-buy .cta .material-icons {
   font-size: inherit;
   position: absolute;
   top: 50%;
@@ -1263,7 +1271,9 @@ section#delivery .delivery-inner {
   border-bottom: 1px solid #d2d2d7;
 }
 
-.free, .finance, .help {
+.free,
+.finance,
+.help {
   flex: 1 25%;
 }
 

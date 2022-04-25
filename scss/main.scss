@@ -1,7 +1,6 @@
 @import "mixin";
 @import "_utils";
 @import "reset";
-
 /* global-nav 숨기고 local-nav blur 효과 관련  */
 .local-nav-sticky nav.local-nav {
 	position: fixed;
@@ -12,11 +11,13 @@
 	-moz-backdrop-filter: saturate(180%) blur(15px);
 	-o-backdrop-filter: saturate(180%) blur(15px);
 	backdrop-filter: saturate(180%) blur(15px);
+
 	&.active {
 		backdrop-filter: none;
 		background-color: #fff;
 	}
 }
+
 /* global-nav */
 nav.global-nav {
 	position: absolute;
@@ -27,31 +28,38 @@ nav.global-nav {
 	height: 48px;
 	background-color: map-get($color, bgc-global-nav);
 	z-index: 10;
-	transition: background .44s .2s cubic-bezier(0.52, 0.16, 0.24, 1),height .56s cubic-bezier(0.52, 0.16, 0.24, 1);
+	transition: background .44s .2s cubic-bezier(0.52, 0.16, 0.24, 1), height .56s cubic-bezier(0.52, 0.16, 0.24, 1);
+
 	.nav__links {
 		ul {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			height: 100%;
+
 			.global-nav__links__menu__tray {
 				flex: 1;
 				display: flex;
 				align-items: center;
 				justify-content: space-evenly;
 			}
+
 			li {
 				padding: 10px;
-				&.mobile-icon.menu{
+
+				&.mobile-icon.menu {
 					display: none;
 				}
+
 				a {
 					color: #fff;
 					opacity: .7;
 					font-size: 16px;
+
 					&:hover {
 						opacity: 1;
 					}
+
 					&.apple-logo {
 						opacity: 1;
 						font-size: 28px;
@@ -61,10 +69,12 @@ nav.global-nav {
 			}
 		}
 	}
+
 	.mobile-search {
 		display: none;
 	}
 }
+
 /* local-nav */
 nav.local-nav {
 	background-color: inherit;
@@ -75,9 +85,9 @@ nav.local-nav {
 	left: 0;
 	right: 0;
 	z-index: 9;
-	transition: all .44s .2s cubic-bezier(0.52, 0.16, 0.24, 1),height .56s cubic-bezier(0.52, 0.16, 0.24, 1);
+	transition: all .44s .2s cubic-bezier(0.52, 0.16, 0.24, 1), height .56s cubic-bezier(0.52, 0.16, 0.24, 1);
 	@include common-border-bottom;
-	
+
 	.nav__links {
 
 		height: 100%;
@@ -87,33 +97,39 @@ nav.local-nav {
 
 		.local-nav__links__title {
 			padding-left: 10px;
+
 			a {
 				font-size: 21px;
 				color: #000;
 				font-weight: bold;
 			}
 		}
-		
+
 		.local-nav__links__menu {
 			display: flex;
 			align-items: center;
-			.local-nav__links__menu__tray{
+
+			.local-nav__links__menu__tray {
 				margin-right: 10px;
+
 				ul {
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+
 					li {
 						a {
 							padding: 10px 15px;
-						}	
+						}
 					}
 				}
 			}
-			.local-nav__links__menu__actions{
+
+			.local-nav__links__menu__actions {
 				display: flex;
 				align-items: center;
 			}
+
 			a {
 				font-size: 1.4rem;
 				color: rgba(0, 0, 0, .88);
@@ -143,6 +159,7 @@ nav.local-nav {
 		}
 	}
 }
+
 /* CURTAIN */
 .local-nav-curtain {
 	position: fixed;
@@ -154,6 +171,7 @@ nav.local-nav {
 	background: rgba(0, 0, 0, .65);
 	z-index: 8;
 	transition: opacity 1s ease .1s;
+
 	&.active {
 		opacity: 1;
 		bottom: 0;
@@ -170,52 +188,62 @@ main {
 	//padding-top: 100px;
 	background-color: inherit;
 }
+
 /* SPEED */
 section#speed {
 	background-color: map-get($color, bgc-gray);
 	z-index: 2;
 	position: relative;
+
 	.speed-inner {
 		min-height: 200vh;
 		margin-bottom: -100vh;
 		margin-top: 0;
+
 		@at-root .sticky-content {
 			top: 0;
 			min-height: 100vh;
 			position: sticky;
 			display: flex;
 			flex-direction: column;
+
 			@at-root .section-content {
 				margin: 0 auto;
-				width: 980px; 
+				width: 980px;
 			}
+
 			.sticky-content__typo-content {
 				display: flex;
 				flex-direction: column;
 				text-align: center;
+
 				h1 {
 					white-space: nowrap;
 					margin-top: 15rem;
 					color: map-get($color, font-main-normal);
 					font-size: 2.1rem;
 				}
+
 				h2 {
 					margin-top: 1.5rem;
 					font-size: 6.4rem;
 					font-weight: 700;
 					min-width: 37rem;
 				}
+
 				.typo-content__intro {
 					margin-top: 2rem;
 					margin-bottom: 1.7rem;
 					font-size: 2.1rem;
 					min-width: 37rem;
 				}
+
 				.typo-content__price {
 					white-space: nowrap;
 					color: map-get($color, font-main-gray);
 					font-size: 2.1rem;
 				}
+
 				.typo-content__button {
 					padding: 12px 22px;
 					margin: 2.5rem auto 0;
@@ -232,17 +260,21 @@ section#speed {
 	padding-bottom: 7rem;
 	width: 100%;
 }
+
 /* swiper */
-.swiper-container{
+.swiper-container {
 	position: relative;
+
 	.swiper-slide {
 		padding: 0 5vw;
+
 		img {
 			object-fit: contain;
 			max-height: 250px;
 			width: 100%;
-		}	
+		}
 	}
+
 	.swiper-pagination {
 		position: absolute;
 		bottom: -100px;
@@ -258,25 +290,32 @@ section#speed {
 	opacity: 1;
 	margin-right: 15px;
 	position: relative;
+
 	&.purple {
 		background: #9186BE;
 	}
+
 	&.blue {
 		background: #1B3154;
 	}
+
 	&.green {
 		background: #C5D9C2;
 	}
+
 	&.red {
 		background: #B62125;
 	}
+
 	&.white {
 		background: #C3BCB5;
 	}
+
 	&.black {
 		background: #232228;
 		margin-right: 0;
 	}
+
 	.bullet-color-label {
 		display: none;
 		font-size: 1.4rem;
@@ -286,25 +325,29 @@ section#speed {
 		transform: translate3d(-50%, 0, 0);
 	}
 }
+
 /* 컬러 팔레트 active시 */
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active {
 	outline: 5px solid map-get($color, ring);
+
 	.bullet-color-label {
 		display: block;
 	}
 }
+
 /* FEATURES */
 section#features {
 	background-color: inherit;
 	z-index: 3;
 	position: relative;
 }
+
 .grid-container {
 	max-width: 1440px;
 	margin: 0 auto;
 	display: grid;
 	padding: 70px var(--grid-gutter) 122px;
-	grid-template-columns: repeat(6,1fr);
+	grid-template-columns: repeat(6, 1fr);
 	grid-auto-rows: var(--grid-auto-rows);
 	gap: var(--grid-gutter);
 
@@ -314,46 +357,55 @@ section#features {
 		position: relative;
 		overflow: hidden;
 	}
+
 	/* 공통 inner */
 	.grid-item-inner {
 		height: 100%;
 	}
+
 	/* 흰색 글씨 */
 	.white {
 		color: white;
 	}
+
 	.two_sizes {
 		background-color: map-get($color, bgc-gridItem-twoSizes);
 		grid-column: span 6;
+
 		.grid-item-inner {
 			margin-right: 59%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+
 			@at-root .feature-headline {
 				font-size: 48px;
 				z-index: 1;
 			}
+
 			@at-root .button--modal {
 				font-size: 40px;
-    		position: absolute;
-    		z-index: 1;
-    		bottom: 20px;
-    		right: 20px;
+				position: absolute;
+				z-index: 1;
+				bottom: 20px;
+				right: 20px;
 				cursor: pointer;
 			}
+
 			@at-root .media-cover {
 				position: absolute;
 				top: 0;
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: rgba(0,0,0,.3);
+				background-color: rgba(0, 0, 0, .3);
 			}
+
 			.feature-headline {
 				text-align: center;
 				white-space: nowrap;
 			}
+
 			.media-wrapper {
 				position: absolute;
 				bottom: 0;
@@ -363,20 +415,24 @@ section#features {
 			}
 		}
 	}
+
 	.fast_strong_chip {
-		background-color: orange;
+
 		grid-column: span 4;
+
 		.grid-item-inner {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
+
 			.media-wrapper {
 				position: absolute;
 				bottom: 0;
 				top: 0;
 				left: 0;
 				right: 0;
-				&::before{
+
+				&::before {
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -386,21 +442,26 @@ section#features {
 					width: 100%;
 					padding-top: 56.25%;
 				}
+
 				/* iframe */
 				@at-root .player-wrapper {
 					width: 100%;
 					height: 100%;
+
 					.player {
 						width: 100%;
 						height: 100%;
 					}
+
 					&.inactive {
 						display: none;
 					}
 				}
+
 				/* iframe 정지시 대체 이미지 */
 				@at-root .hidden-image {
 					display: none;
+
 					&.active {
 						display: block;
 						object-fit: cover;
@@ -409,16 +470,19 @@ section#features {
 					}
 				}
 			}
-			
+
 		}
 	}
+
 	.battery {
 		grid-column: span 2;
 		background-color: map-get($color, bgc-gridItem-battery);
+
 		.grid-item-inner {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
+
 			.media-wrapper {
 				position: absolute;
 				bottom: 0;
@@ -429,13 +493,16 @@ section#features {
 			}
 		}
 	}
+
 	.design_endframe {
 		background-color: map-get($color, bgc-gridItem-material);
 		grid-column: span 6;
+
 		.grid-item-inner {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
+
 			.media-wrapper {
 				position: absolute;
 				bottom: 0px;
@@ -449,44 +516,56 @@ section#features {
 			}
 		}
 	}
+
 	.night_mode {
 		grid-column: span 4;
+
 		.grid-item-inner {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
+
 			.media-wrapper {
 				@include image-full-fit;
 			}
 		}
 	}
+
 	.fiveg {
 		grid-column: span 2;
+
 		.media-wrapper {
 			@include image-full-fit;
 		}
 	}
+
 	.ceramic_shield {
 		grid-column: span 3;
+
 		.grid-item-inner {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
+
 			.media-wrapper {
 				@include image-full-fit;
 			}
 		}
 	}
+
 	.oled_display {
 		background-color: map-get($color, bgc-gridItem-oled);
 		grid-column: span 3;
+
 		.grid-item-inner {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
+
 			.feature-headline {
 				text-align: center;
 			}
+
 			.media-wrapper {
 				position: absolute;
 				bottom: 0;
@@ -494,16 +573,20 @@ section#features {
 			}
 		}
 	}
+
 	.magsafe {
 		background-color: map-get($color, bgc-gray);
 		grid-column: span 2;
+
 		.grid-item-inner {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
+
 			.feature-headline {
 				text-align: center;
 			}
+
 			.media-wrapper {
 				position: absolute;
 				bottom: 0;
@@ -511,25 +594,31 @@ section#features {
 			}
 		}
 	}
+
 	.dolby_vision {
 		grid-column: span 4;
+
 		.grid-item-inner {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
+
 			.media-wrapper {
 				@include image-full-fit;
 			}
 		}
 	}
+
 	.wet_ok {
-		background-color: orange;
+
 		grid-column: span 6;
+
 		.grid-item-inner {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+
 			.media-wrapper {
 				position: absolute;
 				bottom: 0;
@@ -540,42 +629,52 @@ section#features {
 		}
 	}
 }
+
 /* COMPARE */
 section#compare {
 	padding-top: 110px;
-	padding-bottom: 40px; 
+	padding-bottom: 40px;
 	background-color: map-get($color, bgc-gray);
+
 	.compare-inner {
 		@at-root .compare-headline {
 			margin-bottom: 68px;
 			font-size: 5.6rem;
 			text-align: center;
 		}
+
 		.section-callouts {
 			display: flex;
 			flex-wrap: wrap;
+
 			@at-root .section-callout {
 				flex-basis: 50%;
 				max-width: 50%;
 				margin-bottom: 74px;
+
 				.content-wrapper {
 					margin: 0 auto;
 					max-width: 450px;
+
 					.compare-icon {
 						width: 31px;
 					}
+
 					h4 {
 						font-size: 4rem;
+
 						@at-root &.compare-subHeadline {
 							margin-top: 22px;
 							margin-bottom: 18px;
 						}
 					}
+
 					.compare-paragraph {
 						font-size: 1.9rem;
-    				line-height: 1.52632;
-    				font-weight: 400;
-    				letter-spacing: .012rem;
+						line-height: 1.52632;
+						font-weight: 400;
+						letter-spacing: .012rem;
+
 						&.active {
 							a {
 								color: map-get($color, font-main-blue);
@@ -589,19 +688,23 @@ section#compare {
 		}
 	}
 }
+
 /* WHICH */
 section#which {
 	padding-top: 110px;
-  padding-bottom: 115px;
-  position: relative;
+	padding-bottom: 115px;
+	position: relative;
+
 	.which-inner {
 		.which-headline {
 			font-size: 56px;
 			text-align: center;
 		}
+
 		@at-root .which-content {
 			text-align: center;
 			margin-top: 69px;
+
 			@at-root .which-grid-container {
 				max-width: 940px;
 				margin: 0 auto;
@@ -611,272 +714,343 @@ section#which {
 				row-gap: 40px;
 				column-gap: 34px;
 				grid-template-areas:
-        "iphone_13_pro-device iphone_13-device iphone_se-device iphone_12-device"
-        "iphone_13_pro-display iphone_13-display iphone_se-display iphone_12-display"
-        "iphone_13_pro-camera iphone_13-camera iphone_se-camera iphone_12-camera"
-        "iphone_13_pro-chip iphone_13-chip iphone_se-chip iphone_12-chip"
-        "iphone_13_pro-cellular iphone_13-cellular iphone_se-cellular iphone_12-cellular"
-        "iphone_13_pro-battery iphone_13-battery iphone_se-battery iphone_12-battery"
-        "iphone_13_pro-authentication iphone_13-authentication iphone_se-authentication iphone_12-authentication";
+					"iphone_13_pro-device iphone_13-device iphone_se-device iphone_12-device"
+					"iphone_13_pro-display iphone_13-display iphone_se-display iphone_12-display"
+					"iphone_13_pro-camera iphone_13-camera iphone_se-camera iphone_12-camera"
+					"iphone_13_pro-chip iphone_13-chip iphone_se-chip iphone_12-chip"
+					"iphone_13_pro-cellular iphone_13-cellular iphone_se-cellular iphone_12-cellular"
+					"iphone_13_pro-battery iphone_13-battery iphone_se-battery iphone_12-battery"
+					"iphone_13_pro-authentication iphone_13-authentication iphone_se-authentication iphone_12-authentication";
+
 				.iphone_13_pro {
 					&.device {
 						grid-area: iphone_13_pro-device;
 					}
+
 					&.display {
 						grid-area: iphone_13_pro-display;
 					}
+
 					&.camera {
 						grid-area: iphone_13_pro-camera;
 					}
+
 					&.chip {
 						grid-area: iphone_13_pro-chip;
 					}
+
 					&.cellular {
 						grid-area: iphone_13_pro-cellular;
 					}
+
 					&.battery {
 						grid-area: iphone_13_pro-battery;
 					}
+
 					&.authentication {
 						grid-area: iphone_13_pro-authentication;
 					}
 				}
+
 				.iphone_13 {
 					&.device {
 						grid-area: iphone_13-device;
 					}
+
 					&.display {
 						grid-area: iphone_13-display;
 					}
+
 					&.camera {
 						grid-area: iphone_13-camera;
 					}
+
 					&.chip {
 						grid-area: iphone_13-chip;
 					}
+
 					&.cellular {
 						grid-area: iphone_13-cellular;
 					}
+
 					&.battery {
 						grid-area: iphone_13-battery;
 					}
+
 					&.authentication {
 						grid-area: iphone_13-authentication;
 					}
 				}
+
 				.iphone_se {
 					&.device {
 						grid-area: iphone_se-device;
 					}
+
 					&.display {
 						grid-area: iphone_se-display;
 					}
+
 					&.camera {
 						grid-area: iphone_se-camera;
 					}
+
 					&.chip {
 						grid-area: iphone_se-chip;
 					}
+
 					&.cellular {
 						grid-area: iphone_se-cellular;
 					}
+
 					&.battery {
 						grid-area: iphone_se-battery;
 					}
+
 					&.authentication {
 						grid-area: iphone_se-authentication;
 					}
 				}
+
 				.iphone_12 {
 					&.device {
 						grid-area: iphone_12-device;
 					}
+
 					&.display {
 						grid-area: iphone_12-display;
 					}
+
 					&.camera {
 						grid-area: iphone_12-camera;
 					}
+
 					&.chip {
 						grid-area: iphone_12-chip;
 					}
+
 					&.cellular {
 						grid-area: iphone_12-cellular;
 					}
+
 					&.battery {
 						grid-area: iphone_12-battery;
 					}
+
 					&.authentication {
 						grid-area: iphone_12-authentication;
 					}
 				}
+
 				.device {
 					padding-bottom: 35px;
-    			border-bottom: 1px solid map-get($color, footer-border);
+					border-bottom: 1px solid map-get($color, footer-border);
+
 					@at-root .device-image {
 						min-height: 255px;
 						margin-bottom: 22px;
+
 						img {
 							height: 255px;
 						}
 					}
+
 					.device-color {
 						margin-bottom: 35px;
 						height: 14px;
+
 						&.iphone13_pro_colors img {
 							width: 86px;
 						}
-						&.iphone13_colors img, &.iphone12_colors img {
+
+						&.iphone13_colors img,
+						&.iphone12_colors img {
 							width: 104px;
 						}
+
 						&.iphonese_colors img {
 							width: 50px;
 						}
 					}
+
 					.device-content {
 						position: relative;
 						display: flex;
 						flex-direction: column;
 						align-items: center;
+
 						h4 {
 							span {
 								white-space: nowrap;
-    						font-size: 12px;
+								font-size: 12px;
 								font-weight: 400;
-    						color: #bf4800;
+								color: #bf4800;
 								position: absolute;
 								top: -22px;
 								left: 50%;
 								transform: translateX(-50%);
 							}
+
 							.logo {
 								height: 20px;
+
 								&.logo_iphone_13_pro {
 									width: 132px;
 								}
+
 								&.logo_iphone_13 {
 									width: 95px;
 								}
+
 								&.logo_iphone_se {
 									width: 98px;
 								}
+
 								&.logo_iphone_12 {
 									width: 97px;
 								}
 							}
 						}
+
 						.slogan {
 							margin-top: 7px;
 							min-height: 50px;
 							font-size: 17px;
 						}
+
 						.price {
 							margin-top: 11px;
 							font-size: 14px;
 						}
+
 						.button {
 							margin-top: 16px;
 							font-size: 12px;
 							padding: 4px 11px;
 							@include button;
 						}
+
 						.cta {
-							font-size: 14px;						
+							font-size: 14px;
 							margin-top: 11px;
 							@include cta;
 						}
 					}
 				}
+
 				p {
 					font-size: 14px;
 				}
-				.display, .camera, .chip, .cellular, .battery {
+
+				.display,
+				.camera,
+				.chip,
+				.cellular,
+				.battery {
 					padding-top: 4px;
 				}
+
 				:is(.camera, .chip, .cellular, .battery, .authentication) img {
 					margin-bottom: 8px;
 				}
+
 				.display {
 					h5 {
 						margin-bottom: 2px;
 						font-size: 20px;
 					}
 				}
+
 				.camera {
 					img {
 						width: 37px;
 						height: 39px;
 					}
+
 					p {
 						&:nth-of-type(2) {
 							color: map-get($color, font-footer-normal);
 						}
 					}
 				}
+
 				.chip {
 					img {
 						width: 40px;
 						height: 40px;
 					}
+
 					p {
 						&:nth-of-type(2) {
 							color: map-get($color, font-footer-normal);
 						}
 					}
 				}
+
 				.cellular {
 					img {
 						width: 50px;
 						height: 36px;
 					}
 				}
+
 				.battery {
 					img {
 						width: 51px;
 						height: 25px;
 					}
 				}
+
 				.authentication {
 					border-bottom: 1px solid map-get($color, footer-border);
-    			margin-bottom: 2px;
-    			padding-bottom: 45px;
+					margin-bottom: 2px;
+					padding-bottom: 45px;
+
 					img {
 						width: 38px;
 						height: 37px;
 					}
 				}
 			}
+
 			@at-root .which-cta {
 				display: flex;
 				justify-content: center;
 				margin-top: 40px;
 				font-size: 21px;
+
 				.cta {
 					&:nth-child(1) {
 						margin-right: 1.4em;
 					}
+
 					&:nth-child(2) {
 						margin-left: 1.4em;
 					}
+
 					@include cta;
 				}
 			}
 		}
 	}
 }
+
 /* REASON */
 section#reason {
 	background-color: map-get($color, bgc-gray);
 	padding-top: 116px;
 	text-align: center;
+
 	.reason-inner {
 		.reason-header {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+
 			h3 {
 				font-size: 5.6rem;
 			}
+
 			.cta {
 				padding-top: 8px;
 				font-size: 2.4rem;
@@ -885,27 +1059,34 @@ section#reason {
 		}
 	}
 }
+
 /* BUY */
 section#buy {
 	background-color: map-get($color, bgc-gray);
 	text-align: center;
+
 	@at-root .buy-inner {
 		display: flex;
 		justify-content: space-between;
 		padding-top: 150px;
-    padding-bottom: 115px;
+		padding-bottom: 115px;
 		gap: 24px;
-		.credit, .best-buy {
+
+		.credit,
+		.best-buy {
 			width: calc((100% - 24px) / 2);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+
 			h3 {
 				font-size: 4.2rem;
 			}
+
 			p {
 				font-size: 1.9rem;
 			}
+
 			.cta {
 				margin: 0 auto;
 				font-size: 1.9rem;
@@ -914,35 +1095,46 @@ section#buy {
 		}
 	}
 }
+
 /* DELIVERY */
 section#delivery {
 	border-top: 1px solid #ccc;
 	background-color: map-get($color, bgc-gray);
 	text-align: center;
+
 	.delivery-inner {
 		display: flex;
 		flex-wrap: wrap;
 		padding-bottom: 56px;
 		border-bottom: 1px solid map-get($color, footer-border);
-		@at-root .free, .finance, .help {
+
+		@at-root .free,
+		.finance,
+		.help {
 			flex: 1 25%;
 		}
+
 		.inner {
 			margin: 0 auto;
 			padding-top: 56px;
+
 			img {
 				height: 56px;
 			}
+
 			h3 {
 				font-size: 19px;
 			}
+
 			p {
 				font-size: 14px;
 			}
+
 			div {
 				font-size: 15px;
 				display: flex;
 				justify-content: center;
+
 				.cta {
 					@include cta;
 				}
@@ -950,11 +1142,13 @@ section#delivery {
 		}
 	}
 }
+
 /* FOOTER */
 footer {
 	background-color: map-get($color, bgc-gray);
 	padding-bottom: 50px;
 }
+
 .nav-breadcrumbs {
 	padding: 17px 0;
 	margin: 0 auto;
@@ -966,12 +1160,15 @@ footer {
 		font-size: 28px;
 		padding-right: 5px;
 	}
+
 	ol {
 		flex: 2;
 		font-size: 14px;
 		display: flex;
+
 		li {
 			padding: 5px;
+
 			&::before {
 				background-image: url('../images/breadcrumbs.svg');
 				width: 8px;
@@ -987,61 +1184,40 @@ footer {
 		}
 	}
 }
+
 /* nav-links */
 .link-items {
 	display: flex;
+
 	.link-item {
 		flex-basis: 20%;
 		font-size: 12px;
+
 		.link-item-title {
 			font-weight: bold;
 			margin-bottom: 10px;
 		}
+
 		.link-item-content {
 			a {
 				color: map-get($color, font-footer-link);
 				text-decoration: none;
 				margin-bottom: 10px;
+
 				&:last-child {
 					margin-bottom: 0;
 				}
 			}
 		}
-		.link-item-section + .link-item-section {
+
+		.link-item-section+.link-item-section {
 			margin-top: 18px;
 		}
 	}
 }
+
 /* Blank */
 section#blank {
 	background-color: map-get($color, bgc-gray);
 	height: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

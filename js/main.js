@@ -22,13 +22,30 @@ const localNavMenuTrayEl = document.querySelector('.local-nav__links__menu__tray
 const curtainEl = document.querySelector('.local-nav-curtain');
 let isLocalNavActive = false;
 const toggleLocalNav = () => {
-	if (!isLocalNavActive) {
-		toggleSpanEl.textContent = 'expand_less';
+	if(!isLocalNavActive) {
+		gsap.fromTo(localNavMenuTrayEl, {
+			display: 'none',
+			transform: 'translate3d(0,-100px,0)',
+			opacity: 0,
+		}, {
+			display: 'block',
+			transform: 'translate3d(0,0,0)',
+			opacity: 1
+		});
 		isLocalNavActive = true;
 	} else {
-		toggleSpanEl.textContent = 'expand_more';
+		gsap.fromTo(localNavMenuTrayEl, .3, {
+			display: 'block',
+			transform: 'translate3d(0,0,0)',
+			opacity: 1
+		}, {
+			display: 'none',
+			transform: 'translate3d(0,-100px,0)',
+			opacity: 0
+		});
 		isLocalNavActive = false;
 	}
+	toggleSpanEl.classList.toggle('active');
 	curtainEl.classList.toggle('active');
 	localNavEl.classList.toggle('active');
 	localNavMenuTrayEl.classList.toggle('active');
@@ -471,8 +488,8 @@ if(isMobileSize) handleFooterToggle(isMobileSize);
 
 window.addEventListener('resize', () => {
 	isMobileSize = window.matchMedia("(max-width: 768px)").matches;
-	if(isMobileSize) handleFooterToggle(isMobileSize);
-})
+	if(isMobileSize) handleFooterToggle(isMobileSize);		
+});
 
 function handleFooterToggle () {
 	linkItemTitleEls.forEach((linkItemTitleEl, idx) =>

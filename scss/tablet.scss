@@ -1,7 +1,6 @@
-@import "reset";
-@import "_utils";
 @import "mixin";
-
+@import "_utils";
+@import "reset";
 // Tablet
 :root {
 	--grid-tile-border-radius: 17px;

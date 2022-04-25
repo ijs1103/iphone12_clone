@@ -1,4 +1,26 @@
 @charset "UTF-8";
+/* 이미지 강제로 늘려서 부모요소에 채우는 mixin */
+/* 공통  */
+/* grid 관련 변수 */
+:root {
+  --grid-tile-border-radius: 25px;
+  --grid-gutter: 20px;
+  --grid-auto-rows: 550px;
+}
+
+/* nav inner */
+.nav__links {
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* google icon */
+.material-icons {
+  display: block;
+  font-size: 19px;
+}
+
 html {
   font-family: 'Apple SD Gothic Neo', Roboto, 'Noto Sans KR', NanumGothic, 'Malgun Gothic', sans-serif;
   line-height: 1.2;
@@ -79,28 +101,6 @@ a {
   display: block;
 }
 
-/* 공통  */
-/* grid 관련 변수 */
-:root {
-  --grid-tile-border-radius: 25px;
-  --grid-gutter: 20px;
-  --grid-auto-rows: 550px;
-}
-
-/* nav inner */
-.nav__links {
-  max-width: 1024px;
-  margin: 0 auto;
-  height: 100%;
-}
-
-/* google icon */
-.material-icons {
-  display: block;
-  font-size: 19px;
-}
-
-/* 이미지 강제로 늘려서 부모요소에 채우는 mixin */
 :root {
   --grid-tile-border-radius: 17px;
   --grid-gutter: 10px;
