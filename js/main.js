@@ -22,7 +22,7 @@ const localNavMenuTrayEl = document.querySelector('.local-nav__links__menu__tray
 const curtainEl = document.querySelector('.local-nav-curtain');
 let isLocalNavActive = false;
 const toggleLocalNav = () => {
-	if(!isLocalNavActive) {
+	if (!isLocalNavActive) {
 		gsap.fromTo(localNavMenuTrayEl, {
 			display: 'none',
 			transform: 'translate3d(0,-100px,0)',
@@ -53,7 +53,7 @@ const toggleLocalNav = () => {
 localNavToggleEl.addEventListener('click', () => toggleLocalNav());
 curtainEl.addEventListener('click', () => toggleLocalNav());
 /* global-nav 숨기고 local-nav 투명 효과 관련  */
-function checkMenu() {
+const checkMenu = () => {
 	if (window.scrollY > 48) {
 		document.body.classList.add('local-nav-sticky');
 	} else {
@@ -86,8 +86,8 @@ colors.forEach((color, idx) => {
 /* speed section 스크롤시 애니메이션 */
 const typoContentEl = document.querySelector('.sticky-content__typo-content');
 const imageContentEl = document.querySelector('.sticky-content__image-content');
-const sectionFeaturesEl = document.querySelector('#features');
 const gridItemEls = document.querySelectorAll('.grid-item');
+const sectionFeaturesEl = document.querySelector('#features');
 const featureHeadlineEls = document.querySelectorAll('.feature-headline');
 const compareHeadlineEl = document.querySelector('.compare-headline');
 const compareIconEls = document.querySelectorAll('.compare-icon');
@@ -471,31 +471,27 @@ function scrollAnimation() {
 	}).fromTo(reasonCtaEl, ...ani_options(50));
 }
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', _.throttle(() => {
 	if (!isGlobalNavActive) {
 		checkMenu();
 		scrollAnimation();
 	}
-});
+}, 300));
 
 /* footer 토글 버튼 관련 */
 const linkItemTitleEls = document.querySelectorAll('.link-item-title');
 const linkItemContentEls = document.querySelectorAll('.link-item-content');
 const linkTitleEls = document.querySelectorAll('.link-item-title');
 /* 모바일 크기일때에만 토글 관련 함수 실행 */
-let isMobileSize = window.matchMedia("(max-width: 768px)").matches;
-if(isMobileSize) handleFooterToggle(isMobileSize);
+const handleFooterToggle = () => linkItemTitleEls.forEach((linkItemTitleEl, idx) =>
+	linkItemTitleEl.addEventListener('click', () => {
+		linkItemContentEls[idx].classList.toggle('active');
+		linkTitleEls[idx].classList.toggle('active');
+	})
+);
+
+if (window.matchMedia("(max-width: 768px)").matches) handleFooterToggle();
 
 window.addEventListener('resize', () => {
-	isMobileSize = window.matchMedia("(max-width: 768px)").matches;
-	if(isMobileSize) handleFooterToggle(isMobileSize);		
+	if (window.matchMedia("(max-width: 768px)").matches) handleFooterToggle();
 });
-
-function handleFooterToggle () {
-	linkItemTitleEls.forEach((linkItemTitleEl, idx) =>
-		linkItemTitleEl.addEventListener('click', () => {
-			linkItemContentEls[idx].classList.toggle('active');
-			linkTitleEls[idx].classList.toggle('active');
-		})
-	);
-}
