@@ -2,9 +2,7 @@
 const path = require('path')
 const HtmlPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-//export
 
-// 결과물(번들)을 반환하는 설정
 module.exports = {
 	entry: {
 		main: './js/main.js', // 파일을 읽어드리는 진입점을 설정 

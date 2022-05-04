@@ -481,17 +481,11 @@ window.addEventListener('scroll', _.throttle(() => {
 /* footer 토글 버튼 관련 */
 const linkItemTitleEls = document.querySelectorAll('.link-item-title');
 const linkItemContentEls = document.querySelectorAll('.link-item-content');
-const linkTitleEls = document.querySelectorAll('.link-item-title');
-/* 모바일 크기일때에만 토글 관련 함수 실행 */
-const handleFooterToggle = () => linkItemTitleEls.forEach((linkItemTitleEl, idx) =>
+
+linkItemTitleEls.forEach((linkItemTitleEl, idx) =>
 	linkItemTitleEl.addEventListener('click', () => {
 		linkItemContentEls[idx].classList.toggle('active');
-		linkTitleEls[idx].classList.toggle('active');
+		linkItemTitleEls[idx].classList.toggle('active');
 	})
 );
 
-if (window.matchMedia("(max-width: 768px)").matches) handleFooterToggle();
-
-window.addEventListener('resize', () => {
-	if (window.matchMedia("(max-width: 768px)").matches) handleFooterToggle();
-});
