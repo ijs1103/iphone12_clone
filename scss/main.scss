@@ -356,6 +356,7 @@ section#features {
 		border-radius: var(--grid-tile-border-radius);
 		position: relative;
 		overflow: hidden;
+		will-change: transform, opacity;
 	}
 
 	/* 공통 inner */
