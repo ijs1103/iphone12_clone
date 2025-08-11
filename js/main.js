@@ -105,8 +105,9 @@ const ani_options = (number) => [{
 	transform: 'translate3d(0,0,0)'
 }];
 
+gsap.registerPlugin(ScrollTrigger);
+
 function scrollAnimation() {
-	gsap.registerPlugin(ScrollTrigger);
 	/* SECTION SPEED */
 	gsap.to(typoContentEl, {
 		scrollTrigger: {
@@ -471,10 +472,11 @@ function scrollAnimation() {
 	}).fromTo(reasonCtaEl, ...ani_options(50));
 }
 
+scrollAnimation(); // 페이지 로드 시 한 번만 호출
+
 window.addEventListener('scroll', _.throttle(() => {
 	if (!isGlobalNavActive) {
 		checkMenu();
-		scrollAnimation();
 	}
 }, 300));
 
